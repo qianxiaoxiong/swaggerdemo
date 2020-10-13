@@ -1,0 +1,36 @@
+#公共配置与profiles选择无关
+mybatis:
+  typeAliasesPackage: com.swaggerdemo.pojo #实体类所在包
+  mapperLocations: classpath:mapper/*.xml #配置文件所在包
+
+#开发配置
+#spring:
+#  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    datasource1:
+#     jdbcUrl: jdbc:sqlserver://localhost:1433;databaseName=db_test2
+#     username: 123456
+#     password: 123456
+#     driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#    datasource2:
+#     url: jdbc:mysql://localhost:3306/test3?useUnicode=true&characterEncoding=utf8
+#     username: root
+#     password: root
+#     driverClassName: com.mysql.jdbc.Driver
+
+spring:
+  datasource:
+    datasource1:
+      jdbcUrl: jdbc:sqlserver://localhost:1433;databaseName=db_test2
+      username: 123456
+      password: 123456
+      driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    datasource2:
+      jdbcUrl: jdbc:mysql://localhost:3306/test3?useUnicode=true&characterEncoding=utf8
+      username: root
+      password: root
+      driverClassName: com.mysql.jdbc.Driver
+
+logging:
+  level:
+    com.swaggerdemo: debug
